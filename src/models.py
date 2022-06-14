@@ -18,7 +18,7 @@ class User(Base):
     DateSuscription = Column(String(250), nullable=False)
     email = Column(String(250), nullable=False, unique=True)
     Password = Column(String(250), nullable=False)
-    def to_dict(self):                                          #defino el dictionary de mi clase para que le asigne las propiedades a mi objeto
+    def to_dict(self):                                          #defino el dictionary de mi clase para que le asigne las propiedades al objeto
         return {
             "id": self.id,
             "username": self.username,
@@ -49,7 +49,7 @@ class Personas(Base):
     __tablename__ = 'personas'
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
-    id = Column(Integer, primary_key=True)                                        #este tipo de dato me permite escoger en tre imagen video o galeria
+    id = Column(Integer, primary_key=True)                                        #este tipo de dato me permite escoger entre imagen/video/galeria
     url = Column(String(250))
 
     def to_dict(self):
